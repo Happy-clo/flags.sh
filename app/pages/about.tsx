@@ -48,7 +48,7 @@ function About() {
                                     按您的喜好自定义脚本。您可以切换服务器的GUI，更改使用的标志等。默认设置对大多数使用场景已足够好。
                                 </Text>
                                 <Text>
-                                    本项目是依据 <Anchor href="https://github.com/encode42/flags.sh" target="_blank">encode42/flags.sh</Anchor> 的中文汉化版本创建的，并已征得原作者同意，感谢原作者！
+                                    本项目是在 <Anchor href="https://github.com/encode42/flags.sh" target="_blank">encode42/flags.sh</Anchor> 的原版的基础上中文汉化而来的，并已征得原作者同意，感谢原作者！
                                 </Text>
                                 <Text>
                                     最后，执行生成的脚本！您可以从结果窗口复制脚本，或点击下载按钮获取准备就绪的脚本。
