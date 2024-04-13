@@ -4,6 +4,7 @@ on:
     branches:
     - main
   workflow_dispatch:
+
 jobs:
   run:
     runs-on: ubuntu-latest
@@ -17,19 +18,16 @@ jobs:
         node-version: 16
         cache: yarn
 
+    - name: Install dependencies
+      run: yarn install
+
     - name: Build pages
       env:
         NODE_ENV: production
-      run: |
-        yarn install
-        yarn run export
+      run: yarn run export
 
-    - name: Deploy pages
-      uses: peaceiris/actions-gh-pages@v3
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v2
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: out
-        publish_branch: gh-pages
-        cname: flags.sh
-        user_name: GitHub Action
-        user_email: action@github.com
+        name: built-site
+        path: ./out
