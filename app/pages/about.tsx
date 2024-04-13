@@ -50,12 +50,6 @@ function About() {
                                 <Text>
                                     最后，执行生成的脚本！您可以从结果窗口复制脚本，或点击下载按钮获取准备就绪的脚本。
                                 </Text>
-                                <Text>如果您仍然遇到问题，可以加入我们的 <Anchor href={SiteDetails.links.support}>Discord服务器</Anchor>。</Text>
-                            </Group>
-                            <Group direction="column" spacing="xs">
-                                <Title order={2}>贡献</Title>
-                                <Text>想添加新的标志集？发现了错别字？前往 <Anchor href={SiteDetails.links.github}>GitHub</Anchor> 仓库！</Text>
-                                <Text>欢迎任何形式的贡献。</Text>
                             </Group>
                         </Group>
 
