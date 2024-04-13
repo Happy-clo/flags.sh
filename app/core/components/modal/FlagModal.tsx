@@ -33,7 +33,7 @@ export function FlagModal({ open, defaultModernVectors }: FlagModalProps) {
         }}>
             {/* 现代Java开关 */}
             <InputCaption text="添加一个标志，启用试验性的SIMD向量，显著提速地图项渲染。仅适用于基于Pufferfish的分支和运行Java 17 Hotspot的服务器。">
-                <Switch label="现代向量" checked={modernVectors.value} disabled={defaultModernVectors.disabled} onChange={event => {
+                <Switch label="Modern vector" checked={modernVectors.value} disabled={defaultModernVectors.disabled} onChange={event => {
                     modernVectors.set(event.target.checked);
                 }} />
             </InputCaption>
