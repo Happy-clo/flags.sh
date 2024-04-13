@@ -8,7 +8,7 @@ import { HomeLink } from "../core/components/actionButton/HomeLink";
 import { Link, Routes } from "blitz";
 
 /**
- * The about page of the site.
+ * 网站的关于页面。
  */
 function About() {
     const { colorScheme } = useMantineColorScheme();
@@ -28,34 +28,34 @@ function About() {
 
                         <Group direction="column">
                             <Group direction="column" spacing="xs">
-                                <Title order={2}>About</Title>
-                                <Text>{SiteDetails.title} generates a start script for your Minecraft Java Edition server.</Text>
-                                <Text>It features stupid simple configuration, many flag types for optimization, and pre-made scripts!</Text>
+                                <Title order={2}>关于</Title>
+                                <Text>{SiteDetails.title} 为您的Minecraft Java版服务器生成启动脚本。</Text>
+                                <Text>它功能简单易用，提供多种优化标志和预设脚本！</Text>
                             </Group>
                             <Group direction="column" spacing="xs">
-                                <Title order={2}>Support</Title>
-                                <Text>Here's how to use this site:</Text>
+                                <Title order={2}>支持</Title>
+                                <Text>如何使用本站：</Text>
                                 <Text>
-                                    From the <Link href={Routes.Home()} passHref><Anchor>homepage</Anchor></Link>, enter the name of your server jar.
-                                    This jar would be located in your Minecraft server's root directory, where all the config files are located.
-                                    If you haven't downloaded a server jar yet, check out <Anchor href="https://papermc.io" target="_blank">Paper</Anchor> or <Anchor href="https://purpurmc.org" target="_blank">Purpur</Anchor>!
+                                    在<Link href={Routes.Home()} passHref><Anchor>首页</Anchor></Link>，输入您的服务器jar文件名。
+                                    这个jar文件应位于您的Minecraft服务器的根目录，那里有所有的配置文件。
+                                    如果您还没下载服务器jar，可以查看 <Anchor href="https://papermc.io" target="_blank">Paper</Anchor> 或 <Anchor href="https://purpurmc.org" target="_blank">Purpur</Anchor>!
                                 </Text>
                                 <Text>
-                                    Enter the amount of memory to allocate to the server with the slider. Ensure this is at least <Code>2 GB</Code> less than your available memory to give your operating system and other applications room to breathe.
-                                    For example, if your machine has <Code>8 GB</Code> of memory, give the server at most <Code>6 GB</Code>.
+                                    使用滑块输入要分配给服务器的内存量。确保这个值至少比您可用内存少 <Code>2 GB</Code>，以便为操作系统和其他应用程序留出空间。
+                                    例如，如果您的机器有 <Code>8 GB</Code> 内存，最多给服务器 <Code>6 GB</Code>。
                                 </Text>
                                 <Text>
-                                    Customize the scripts to your liking. You can toggle the server's GUI, change the flags to use, and more. The default settings should be fine for most use cases.
+                                    按您的喜好自定义脚本。您可以切换服务器的GUI，更改使用的标志等。默认设置对大多数使用场景已足够好。
                                 </Text>
                                 <Text>
-                                    Finally, put the generated script into action! You can either copy the script from the results window, or hit the download button to get a ready script.
+                                    最后，执行生成的脚本！您可以从结果窗口复制脚本，或点击下载按钮获取准备就绪的脚本。
                                 </Text>
-                                <Text>You can join the <Anchor href={SiteDetails.links.support}>Discord server</Anchor> if you're still running into issues.</Text>
+                                <Text>如果您仍然遇到问题，可以加入我们的 <Anchor href={SiteDetails.links.support}>Discord服务器</Anchor>。</Text>
                             </Group>
                             <Group direction="column" spacing="xs">
-                                <Title order={2}>Contribute</Title>
-                                <Text>Want to add a new set of flags? Found a typo? head to the <Anchor href={SiteDetails.links.github}>GitHub</Anchor> repository!</Text>
-                                <Text>All contributions are very welcome.</Text>
+                                <Title order={2}>贡献</Title>
+                                <Text>想添加新的标志集？发现了错别字？前往 <Anchor href={SiteDetails.links.github}>GitHub</Anchor> 仓库！</Text>
+                                <Text>欢迎任何形式的贡献。</Text>
                             </Group>
                         </Group>
 
@@ -71,6 +71,6 @@ function About() {
     );
 }
 
-About.getLayout = page => <Layout title="About">{page}</Layout>;
+About.getLayout = page => <Layout title="关于">{page}</Layout>;
 
 export default About;

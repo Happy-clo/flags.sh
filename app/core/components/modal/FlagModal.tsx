@@ -4,17 +4,17 @@ import { OptionModal, OptionModalRef, ToggleState, InputCaption } from "@encode4
 import { ModalProps } from "./interface/ModalProps";
 
 /**
- * Properties for the flags modal.
+ * 标志模态窗口的属性。
  */
 export interface FlagModalProps extends ModalProps {
     /**
-     * Whether to add incubating vector flags for modern versions of Java Hotspot.
+     * 是否为现代Java Hotspot版本添加试验性向量标志。
      */
     "defaultModernVectors": ToggleState
 }
 
 /**
- * Modal for additional flags options.
+ * 附加标志选项的模态窗口。
  */
 export function FlagModal({ open, defaultModernVectors }: FlagModalProps) {
     const [pendingModernVectors, setPendingModernVectors] = useState<boolean>(defaultModernVectors.value);
@@ -31,9 +31,9 @@ export function FlagModal({ open, defaultModernVectors }: FlagModalProps) {
         <OptionModal open={open} ref={dataModal} values={[modernVectors]} onApply={() => {
             defaultModernVectors.set(modernVectors.value);
         }}>
-            {/* Modern Java switch */}
-            <InputCaption text="Adds a flag that enables incubating SIMD vectors, which significantly speeds up map item rendering. Only applicable in Pufferfish-based forks and servers running Java 17 with Hotspot.">
-                <Switch label="Modern Vectors" checked={modernVectors.value} disabled={defaultModernVectors.disabled} onChange={event => {
+            {/* 现代Java开关 */}
+            <InputCaption text="添加一个标志，启用试验性的SIMD向量，显著提速地图项渲染。仅适用于基于Pufferfish的分支和运行Java 17 Hotspot的服务器。">
+                <Switch label="现代向量" checked={modernVectors.value} disabled={defaultModernVectors.disabled} onChange={event => {
                     modernVectors.set(event.target.checked);
                 }} />
             </InputCaption>

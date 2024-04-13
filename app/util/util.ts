@@ -2,12 +2,9 @@
  * The website's details and links.
  */
 export const SiteDetails = {
-    "title": "flags.sh",
-    "description": "A simple script generator to start your Minecraft servers with optimal flags.",
+    "title": "flags.happys.icu",
+    "description": "一个简单的脚本生成器，可使用最佳的Java标签启动 Minecraft 服务器。",
     "favicon": "/favicon.ico",
     "logo": "/asset/logo.png",
-    "links": {
-        "github": "https://github.com/Encode42/flags.sh",
-        "support": "https://encode42.dev/support"
     }
 };

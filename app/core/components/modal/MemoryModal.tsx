@@ -3,19 +3,19 @@ import { NumberInput, Switch } from "@mantine/core";
 import { OptionModal, OptionModalRef, NumberState, ToggleState, InputCaption, Label } from "@encode42/mantine-extras";
 import { ModalProps } from "./interface/ModalProps";
 
-// TODO: display memory input as mb as well
+// TODO: 同时以MB显示内存输入
 
 /**
- * Properties for the memory modal.
+ * 内存模态窗口的属性。
  */
 export interface MemoryModalProps extends ModalProps {
     /**
-     * The amount of memory to allocate in gigabytes.
+     * 分配的内存量（以GB为单位）。
      */
     "defaultMemory": NumberState,
 
     /**
-     * Whether to calculate additional memory overhead for Pterodactyl containers.
+     * 是否为Pterodactyl容器计算额外的内存开销。
      */
     "defaultPterodactyl": ToggleState
 };
@@ -43,8 +43,8 @@ export function MemoryModal({ open, defaultMemory, defaultPterodactyl }: MemoryM
             defaultMemory.set(memoryValue.value);
             defaultPterodactyl.set(pterodactylValue.value);
         }}>
-            {/* Precise memory selector */}
-            <Label label="Allocated memory (GB)">
+            {/* 精确内存选择器 */}
+            <Label label="分配内存 (GB)">
                 <NumberInput value={memoryValue.value} min={0} step={0.05} precision={2} onChange={value => {
                     if (!value) {
                         return;
@@ -54,8 +54,8 @@ export function MemoryModal({ open, defaultMemory, defaultPterodactyl }: MemoryM
                 }} />
             </Label>
 
-            {/* Pterodactyl overhead switch */}
-            <InputCaption text="Allocates 85% of the provided memory to account for Java overhead within containers and adds console-related flags. Only applicable within the Java Command tab.">
+            {/* Pterodactyl额外开销开关 */}
+            <InputCaption text="为了考虑Java在容器内的开销，分配物理机器内存的85%，并添加与控制台相关的标志。仅适用于Java命令标签页。">
                 <Switch label="Pterodactyl" checked={pterodactylValue.value} disabled={defaultPterodactyl.disabled} onChange={event => {
                     pterodactylValue.set(event.target.checked);
                 }} />
